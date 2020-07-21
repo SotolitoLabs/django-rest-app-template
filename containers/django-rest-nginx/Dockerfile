@@ -23,6 +23,7 @@ RUN apk --no-cache update                                  && \
   rm -rf /var/cache/apk                                    && \
   mkdir /run/nginx
 
+COPY uwsgi.conf /etc/nginx/uwsgi.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80 443
